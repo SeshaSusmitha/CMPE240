@@ -1,0 +1,19 @@
+module counterB (AddrB, IncB, Reset,clock);
+output reg [1:0] AddrB;
+input wire IncB,Reset,clock;
+
+always @ (posedge clock)
+begin
+	if (Reset)
+	begin
+	AddrB <=2'b0;
+	end
+else if (IncB)
+	begin 
+	if(^AddrB === 1'bx)
+		AddrB<=0;
+	else
+		AddrB <= AddrB + 2'b1 ;
+	end
+end
+endmodule

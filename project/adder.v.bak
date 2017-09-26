@@ -1,0 +1,7 @@
+module adder (ADDOut,DOut1,DOut2);
+output [7:0] ADDOut;
+input [7:0] DOut1, DOut2;
+assign ADDOut = DOut1+DOut2;
+endmodule
+
+

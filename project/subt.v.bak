@@ -1,0 +1,7 @@
+module subtractor (SUBOut,sDOut1,sDOut2);
+output [7:0] SUBOut;
+input [7:0] sDOut1, sDOut2;
+assign SUBOut <= sDOut1-sDOut2;
+endmodule
+
+
